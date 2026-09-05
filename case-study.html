@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Case Study — Asif Khan</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0A0E1A;--card:#121826;--card-hover:#161E30;--line:#232B3D;
+    --amber:#E8A33D;--amber-bright:#FFB74D;--text:#F2F4F8;--muted:#8B93A6;--maxw:980px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;line-height:1.7;-webkit-font-smoothing:antialiased;}
+  h1,h2,h3{font-family:'Space Grotesk',sans-serif;}
+  a{color:inherit;text-decoration:none;}
+  ::selection{background:var(--amber);color:#0A0E1A;}
+  .site-header{position:sticky;top:0;z-index:20;background:rgba(10,14,26,.88);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);}
+  nav{max-width:1180px;margin:0 auto;padding:18px 32px;display:flex;align-items:center;justify-content:space-between;gap:20px;}
+  .brand{display:flex;align-items:center;gap:12px;}
+  .brand svg{width:26px;height:26px;}
+  .brand-name{font-weight:600;letter-spacing:.08em;font-size:15px;}
+  .brand-name span{color:var(--amber);}
+  .back{font:10px 'IBM Plex Mono',monospace;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);border:1px solid var(--line);padding:9px 13px;transition:.18s;}
+  .back:hover,.back:focus-visible{color:var(--amber);border-color:var(--amber);}
+  main{max-width:var(--maxw);margin:0 auto;padding:86px 32px 110px;}
+  .article-head{position:relative;padding:38px 42px 42px;border:1px solid rgba(232,163,61,.45);background:linear-gradient(145deg,#111827,#0d1320);overflow:hidden;}
+  .article-head::before,.article-head::after{content:'';position:absolute;width:28px;height:28px;border-color:var(--amber);opacity:.7;pointer-events:none;}
+  .article-head::before{top:12px;left:12px;border-top:1px solid;border-left:1px solid;}
+  .article-head::after{right:12px;bottom:12px;border-right:1px solid;border-bottom:1px solid;}
+  .kicker{font:10px 'IBM Plex Mono',monospace;color:var(--amber);letter-spacing:.14em;text-transform:uppercase;margin-bottom:16px;}
+  h1{font-size:clamp(34px,6vw,64px);line-height:1.03;letter-spacing:-.03em;max-width:900px;margin-bottom:16px;}
+  .role{font:12px/1.7 'IBM Plex Mono',monospace;color:var(--muted);max-width:760px;}
+  .rule{height:1px;background:linear-gradient(90deg,var(--amber),rgba(232,163,61,0));margin:30px 0 0;}
+  .article-body{padding:52px 10px 0;}
+  .case-section{border-top:1px solid var(--line);padding:25px 0 30px;display:grid;grid-template-columns:190px 1fr;gap:35px;}
+  .label{font:10px 'IBM Plex Mono',monospace;color:var(--amber);letter-spacing:.12em;text-transform:uppercase;padding-top:4px;}
+  .case-section p{font-size:16px;line-height:1.85;color:var(--muted);max-width:700px;}
+  .case-section:first-child{border-top:0;padding-top:0;}
+  .tools{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px;}
+  .tools span{font:10px 'IBM Plex Mono',monospace;color:var(--muted);border:1px solid var(--line);padding:5px 9px;}
+  .article-footer{margin-top:42px;padding-top:24px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:20px;align-items:center;color:var(--muted);font:10px 'IBM Plex Mono',monospace;letter-spacing:.08em;text-transform:uppercase;}
+  .note{margin-top:28px;border:1px dashed var(--line);padding:16px 18px;color:var(--muted);font-size:12px;}
+  @media(max-width:700px){
+    nav{padding:15px 18px;}main{padding:50px 18px 80px}.article-head{padding:32px 24px 30px}.article-body{padding:40px 2px 0}.case-section{grid-template-columns:1fr;gap:10px;padding:22px 0 26px}.case-section p{font-size:14px}.article-footer{align-items:flex-start;flex-direction:column;}
+  }
+</style>
+</head>
+<body>
+<header class="site-header">
+  <nav>
+    <a class="brand" href="index.html" aria-label="Back to Asif Khan portfolio">
+      <svg viewBox="0 0 100 100" fill="none"><path d="M50 45 L20 15 L20 5 L50 32 L80 5 L80 15 Z" fill="#F2F4F8"/><path d="M46 45 L46 95 L38 95 L38 50 Z" fill="#8B93A6"/><path d="M54 45 L54 95 L62 95 L62 50 Z" fill="#F2F4F8"/></svg>
+      <span class="brand-name">ASIF <span>KHAN</span></span>
+    </a>
+    <a class="back" href="index.html#projects">← Back to Projects</a>
+  </nav>
+</header>
+
+<main>
+  <article id="caseStudy">
+    <header class="article-head">
+      <div class="kicker" id="category"></div>
+      <h1 id="title">Case Study</h1>
+      <div class="role" id="role"></div>
+      <div class="rule"></div>
+    </header>
+    <div class="article-body" id="body"></div>
+    <div class="article-footer">
+      <span>ASIF KHAN — LIGHTING DESIGN &amp; ESTIMATION ENGINEER</span>
+      <a href="index.html#projects">Return to project index ↗</a>
+    </div>
+  </article>
+</main>
+
+<script>
+(function(){
+  const data = {
+    warsan:{category:'Streetlighting',title:'8m & 12m Streetlighting Pole Supply & Installation',role:'Design & Estimation Engineer — Dubai, UAE',blocks:[
+      ['PROJECT SNAPSHOT','An outdoor streetlighting package for a sewage treatment plant, covering more than 850 street luminaires together with pole supply and installation scope.'],
+      ['MY ROLE','End-to-end technical ownership from estimation through handover. I worked across design, quantities, coordination and project documentation, while coordinating the electrical, civil and sales requirements needed to move the package forward.'],
+      ['TECHNICAL SCOPE','8m and 12m pole configurations, photometric design and technical documentation. The workflow connected AutoCAD layouts and DIALux calculations with MIR/WIR requirements during execution.'],
+      ['DELIVERY','The project required coordination across multiple disciplines rather than a lighting-only design exercise. The portfolio evidence here is intentionally limited to the scope I can substantiate.'],
+      ['TOOLS','AutoCAD · DIALux · MIR/WIR']
+    ]},
+    dammam:{category:'Streetlighting',title:'Commercial Area Plan — Dammam',role:'Lighting Design & Estimation — Dammam, Saudi Arabia',blocks:[
+      ['PROJECT SNAPSHOT','A commercial-area lighting plan serving approximately 300–500 shops, with around 100 streetlights plus entrance floodlighting. Approximate supply value: AED 250k.'],
+      ['DESIGN PARAMETERS','8m single-arm poles with a 0.5m boom, 5° boom angle, 80W / 4000K luminaires and approximately 30m pole spacing. Road lighting was assessed against CIE M5, with P-class criteria applied to parking.'],
+      ['MY ROLE','Owned the lighting design and estimation and participated directly in supplier negotiation. I had competing supplier prices available, understood the client\'s target and knew the available project margin — giving me leverage to negotiate the selected supplier.'],
+      ['COMMERCIAL IMPACT','Supplier negotiation reduced the overall project cost by approximately 5%. The saving came from commercial negotiation rather than changing the stated lighting design parameters.'],
+      ['OUTCOME','Design was approved on first submission. The project is presented here without a bid-win/loss claim.'],
+      ['TOOLS','DIALux · CIE M5 · Estimation · Supplier Negotiation']
+    ]},
+    fifa:{category:'Sports Lighting',title:'FIFA Standard Stadiums',role:'Lighting Design & Application Engineering',blocks:[
+      ['PROJECT SNAPSHOT','Designed 3 FIFA-standard B stadiums and approximately 10 training fields over roughly 6 months, using the FIFA 2026 handbook/lighting guide as the design reference.'],
+      ['MY ROLE','Full technical ownership of the lighting application and photometric design. Commercial negotiations were handled with support from a more senior sales member, while I supplied the technical basis required for those discussions.'],
+      ['THE ENGINEERING CHALLENGE','Pole locations were a major constraint. Camera positions, pole geometry and direct light paths had a significant effect on vertical uniformity and the overall result. Small changes in mast position or aiming strategy could materially change the calculation.'],
+      ['VALUE ENGINEERING','I evaluated proposals across 10 high-mast suppliers and 6 lighting brands rather than accepting a supplier\'s initial configuration. One recurring optimization was challenging the number of luminaires proposed per mast — a design might use 46 where a technically viable solution could use 40 or 38.'],
+      ['DESIGN PHILOSOPHY','The objective was not simply the lowest initial price. I balanced photometric performance, camera positions, pole geometry, product longevity and project margin to identify the stronger overall solution.'],
+      ['OUTCOME','Most of the stadium designs progressed to award. Specific client/project identities and visual outputs are not displayed because the work is covered by NDA.'],
+      ['TOOLS','DIALux · FIFA Lighting Guide · High-Mast Application · Value Engineering']
+    ]},
+    street600:{category:'Streetlighting',title:'600+ Streetlight Supply & Installation',role:'Design, Estimation & Technical Project Support',blocks:[
+      ['PROJECT SNAPSHOT','End-to-end contract covering 600+ streetlights and associated electrical works, including feeder pillars, distribution equipment, cabling, termination and grounding.'],
+      ['SCALE','Approximately 46 grounding circuits, 7 feeder pillars, 2 existing feeder-pillar modifications, around 1,500m of armoured cable and approximately 6,300m of flexible cable.'],
+      ['MY ROLE','Handled estimation, design and broad technical support to the project manager — from luminaire supply down to details such as cutout sizing. I remained involved as design changes, procurement constraints and site requirements developed.'],
+      ['THE PROBLEM','Existing stock of cutouts did not match the sizes required for the project. At the same time, global logistics disruption created a risk to the project timeline.'],
+      ['HOW I RESPONDED','I worked down the local supply chain to find an alternative source, including identifying a distributor, reaching out directly through LinkedIn, obtaining tentative pricing and working with margins to support an urgent order. I also coordinated with logistics on partial deliveries so work could continue while the design evolved.'],
+      ['DESIGN & DELIVERY PRESSURE','The lighting design went through 7 revisions driven by soil testing and pole placement. Those revisions affected the project timeline and required procurement and logistics decisions to keep the project moving.'],
+      ['OUTCOME','The project margin was affected by the delivery pressures, but the team pulled the project through. The scale and execution strengthened the client’s confidence in the company’s capability as a major player.'],
+      ['TOOLS','AutoCAD · DIALux · Estimation · Procurement Support · Site Coordination']
+    ]},
+    oman:{category:'Government',title:'Ministry of Economy — Oman',role:'Lighting Design — 3-floor government facility',blocks:[
+      ['PROJECT SNAPSHOT','Lighting design for a three-floor government facility comprising more than 100 rooms and over 1,000 luminaires.'],
+      ['DESIGN REQUIREMENTS','The design targeted 500 lux at workstations and 250 lux in corridors, with the lighting layout and photometric simulation developed in DIALux Evo.'],
+      ['MY ROLE','Lighting design and photometric development, translating room requirements into a coordinated luminaire layout and BOQ basis.'],
+      ['COMPLIANCE','The project was developed against EN 12464-1 requirements as represented in the current portfolio record. Detailed compliance evidence can be added to the case study when the underlying project material is available.'],
+      ['TOOLS','DIALux Evo · EN 12464-1 · BOQ']
+    ]},
+    aiko:{category:'Retail & Interior',title:'Aiko Mart, Al Ain',role:'Lighting Layout & Design Optimization',blocks:[
+      ['PROJECT SNAPSHOT','Retail lighting project in Al Ain featuring a custom linear lighting system spanning approximately 1 km.'],
+      ['MY ROLE','Handled lighting layout and design optimization, coordinated with the client and supported fixture procurement from China through to on-site handover.'],
+      ['TECHNICAL FOCUS','The scale of the custom linear system required the lighting layout and fixture solution to remain coordinated from design through procurement and installation.'],
+      ['DELIVERY','End-to-end involvement from design through site handover.'],
+      ['TOOLS','AutoCAD · Custom LED / Linear Lighting']
+    ]},
+    e311:{category:'Streetlighting',title:'E311 Luminaire Retrofit',role:'Cost Estimation & Technical Specification',blocks:[
+      ['PROJECT SNAPSHOT','Retrofit scope covering up to 750 streetlights and poles along a highway corridor.'],
+      ['MY ROLE','Prepared the cost estimate and technical specification basis, with attention to matching the existing highway requirements and product specifications.'],
+      ['TECHNICAL FOCUS','The work centred on specification matching, retrofit quantities and the commercial basis required to evaluate the replacement scope.'],
+      ['DELIVERY','Technical submittal and estimation support for a highway lighting retrofit.'],
+      ['TOOLS','Cost Estimation · Technical Submittals']
+    ]},
+    eaglehawk:{category:'Product Design',title:'Eagle & Hawk Streetlamp Concepts',role:'Product / Luminaire Design',blocks:[
+      ['PROJECT SNAPSHOT','Two streetlamp concepts developed around distinctive product forms while maintaining practical lighting requirements.'],
+      ['EAGLE','The Eagle concept secured a client order for 500+ units.'],
+      ['HAWK','The Hawk concept explored a dual-aesthetic form while maintaining compliant illuminance performance.'],
+      ['MY ROLE','Concept and luminaire design work, translating a visual product direction into a lighting concept with a viable technical basis.'],
+      ['TOOLS','Concept Design · 3D Modelling · Lighting Application']
+    ]}
+  };
+
+  const key=new URLSearchParams(window.location.search).get('project');
+  const project=data[key];
+  const category=document.getElementById('category');
+  const title=document.getElementById('title');
+  const role=document.getElementById('role');
+  const body=document.getElementById('body');
+
+  if(!project){
+    category.textContent='CASE STUDY';
+    title.textContent='Project not found';
+    role.textContent='The requested project could not be loaded.';
+    body.innerHTML='<div class="note">Return to the project index and select a case study from the portfolio.</div>';
+    return;
+  }
+
+  category.textContent=project.category;
+  title.textContent=project.title;
+  role.textContent=project.role;
+  document.title=project.title+' — Case Study | Asif Khan';
+  body.innerHTML=project.blocks.map(([label,text])=>{
+    const isTools=label==='TOOLS';
+    if(isTools){
+      const tags=text.split(' · ').map(t=>'<span>'+t+'</span>').join('');
+      return '<section class="case-section"><div class="label">'+label+'</div><div><div class="tools">'+tags+'</div></div></section>';
+    }
+    return '<section class="case-section"><div class="label">'+label+'</div><div><p>'+text+'</p></div></section>';
+  }).join('');
+})();
+</script>
+</body>
+</html>
